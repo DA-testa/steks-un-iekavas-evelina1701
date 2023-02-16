@@ -22,10 +22,10 @@ def find_mismatch(text):
             if not opening_brackets_stack or not are_matching(opening_brackets_stack[-1].char,next):
                 return i+1
             opening_brackets_stack.pop()
-            pass
+            #pass
     if not opening_brackets_stack:
         return 0
-    return opening_brackets_stack[0].position+1
+    return opening_brackets_stack[0].position
 
 
 def main():
@@ -34,7 +34,7 @@ def main():
     # Printing answer, write your code here
     if mismatch == 0:
         print("Success")
-    else
+    else:
         print(mismatch)
 
 if __name__ == "__main__":
